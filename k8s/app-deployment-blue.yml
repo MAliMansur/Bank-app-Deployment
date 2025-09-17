@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: malimansur/blue-green-deployment:17798612954
+        image: malimansur/blue-green-deployment:17808025761
         ports:
         - containerPort: 8080
         env:
