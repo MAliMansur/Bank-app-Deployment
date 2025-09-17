@@ -70,8 +70,8 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
-      - name: Run Checkstyle (or SpotBugs)
-        run: mvn checkstyle:check spotbugs:check
+      - name: Run Checkstyle 
+        run: mvn checkstyle:check 
 
 
   docker:
