@@ -55,6 +55,12 @@ jobs:
       - name: Unit tests
         run: mvn test
 
+      - name: Upload JAR artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: bankapp-jar
+          path: target/*.jar
+
 
   code-quality:
     runs-on: ubuntu-latest
