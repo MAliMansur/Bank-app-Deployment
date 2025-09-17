@@ -16,7 +16,7 @@ spec:
         app: mysql
     spec:
       containers:
-      - image: mysql:8
+      - image: malimansur/blue-green-deployment:17798612954
         name: mysql
         env:
         - name: MYSQL_ROOT_PASSWORD
