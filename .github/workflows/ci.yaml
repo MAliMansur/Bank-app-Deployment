@@ -127,7 +127,7 @@ jobs:
 
       - name: Update tag in Kubernetes manifest
         run: | 
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/blue-green-deployment:${{ github.run_id }}|" k8s/*.yml
+          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/blue-green-deployment:${{ github.run_id }}|" k8s/app-deployment-blue.yml
 
       - name: Commit and push changes
         run: |
