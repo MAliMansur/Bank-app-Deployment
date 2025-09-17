@@ -109,7 +109,7 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/osfpbootcamp2025/blue-green-deployment:${{ github.run_id }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/blue-green-deployment:${{ github.run_id }}
 
 
   updatek8s:
@@ -124,7 +124,7 @@ jobs:
 
       - name: Update tag in Kubernetes manifest
         run: | 
-          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/osfpbootcamp2025/blue-green-deployment:${{ github.run_id }}|" k8s/*.yml
+          sed -i "s|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/blue-green-deployment:${{ github.run_id }}|" k8s/*.yml
 
       - name: Commit and push changes
         run: |

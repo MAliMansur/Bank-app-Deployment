@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: malimansur/osfpbootcamp2025/blue-green-deployment:blue
+        image: malimansur/blue-green-deployment:green
         ports:
         - containerPort: 8080
         env:
